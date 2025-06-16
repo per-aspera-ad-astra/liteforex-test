@@ -34,23 +34,13 @@ The browser will automatically reload when you edit any source file.
 ```
 test-liteforex/
 ├── index.html             # Main HTML file
-├── style/
+├── src/
 │   └── style.css          # Tailwind CSS entry point
-├── tailwind.config.js     # Tailwind configuration
-├── postcss.config.js      # PostCSS configuration
+│   └── icons/             # All icons
+├── public/                # Logo, images, sprite
 ├── package.json           # Project metadata and scripts
-└── vite.config.js         # Vite config (optional or default)
+└── vite.config.js         # Vite config
 ```
-
----
-
-## 📦 Build for Production
-
-```bash
-npm run build
-```
-
-The compiled output will be in the `dist/` folder.
 
 ---
 
@@ -58,8 +48,6 @@ The compiled output will be in the `dist/` folder.
 
 - Vite
 - Tailwind CSS
-- PostCSS
-- Autoprefixer
 
 ---
 

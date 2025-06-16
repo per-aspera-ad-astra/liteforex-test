@@ -16,7 +16,7 @@
   </head>
   <body class="bg-neutral-900 text-neutral-400 font-display">
     <div
-      class="grid grid-cols-[64px_calc(100vw_-_64px)] lg:grid-cols-[64px_1fr]"
+      class="grid grid-cols-[4rem_calc(100vw_-_4rem)] lg:grid-cols-[4rem_1fr]"
     >
       <aside
         class="h-screen sticky top-0 px-2 py-4 flex flex-col gap-6 items-center border-e border-e-neutral-600 overflow-y-auto scrollbar-hide"
@@ -406,7 +406,7 @@
                 </div>
               </div>
 
-              <div>
+              <div class="overflow-hidden">
                 <div class="grid gap-2 md:-mb-12 px-4 sm:px-6 relative z-10">
                   <div class="grid gap-2">
                     <ul
@@ -549,7 +549,9 @@
                     </div>
                   </div>
                 </div>
+
                 <div id="candle-chart" class="w-full overflow-x-auto"></div>
+
                 <div
                   class="flex flex-wrap items-center gap-2 pt-2 pb-6 px-4 sm:px-10 border-t border-neutral-600 text-sm text-white"
                   role="group"
@@ -662,7 +664,7 @@
             </div>
           </section>
 
-          <section>
+          <section class="max-w-xl">
             <div class="mb-2 bg-neutral-800 rounded-sm">
               <div
                 class="flex items-center justify-between px-6 py-4 bg-neutral-600 text-white font-semibold rounded-t-sm"
