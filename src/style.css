@@ -1,0 +1,58 @@
+@import 'tailwindcss';
+
+:root {
+  --color-red-400: #f63c6b;
+  --color-green-400: #0fedbe;
+  --color-blue-400: #00bddd;
+  --color-yellow-400: #ffaa2b;
+  --color-pink-400: #f044ff;
+  --color-purple-400: #8085ff;
+  --color-neutral-400: #999999;
+  --color-neutral-500: #595959;
+  --color-neutral-600: #1f1f1f;
+  --color-neutral-700: #191919;
+  --color-neutral-800: #0a0a0a;
+  --color-neutral-900: #050505;
+  --gradient-green: rgba(9, 135, 108, 0.1) 32%, rgba(15, 137, 190, 0.25);
+  --gradient-blue: rgba(45, 202, 255, 0.1), rgba(125, 222, 255, 0) 74%;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@theme {
+  --font-display: 'Golos Text', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+@utility scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@plugin 'tailwind-scrollbar' {
+  nocompatible: true;
+}
+
+.form-control-wrapper {
+  @apply relative after:absolute after:-inset-0.25 after:bg-linear-to-b after:from-white/50 after:to-black/50 after:rounded-md before:absolute before:z-1 before:-inset-0.25 before:bg-[radial-gradient(ellipse_at_top_left,rgba(15,237,190,0.5),rgba(255,255,255,0.1)_78%)] before:rounded-md;
+}
+
+.form-control {
+  @apply relative z-1 w-full pr-10 py-3 bg-neutral-700 text-white text-sm rounded-md outline-none transition-colors duration-300 focus:bg-neutral-600 cursor-pointer;
+}

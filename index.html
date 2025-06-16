@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-neutral-900 text-neutral-400 font-display">
+    <div
+      class="grid grid-cols-[64px_calc(100vw_-_64px)] lg:grid-cols-[64px_1fr]"
+    >
+      <aside
+        class="h-screen sticky top-0 px-2 py-4 flex flex-col gap-6 items-center border-e border-e-neutral-600 overflow-y-auto scrollbar-hide"
+      >
+        <a href="#" class="w-8 h-8" aria-label="Go to homepage">
+          <img src="/logo.svg" width="32" height="32" alt="Logo" />
+        </a>
+        <nav
+          class="flex flex-col gap-6 items-center flex-auto"
+          aria-label="Navigation"
+        >
+          <ul class="grid gap-4 pt-4 md:pt-16">
+            <li>
+              <a
+                href="#"
+                class="block p-3 transition-colors duration-300 rounded-full border border-transparent hover:text-blue-400 hover:border-blue-400/25"
+                aria-label="Viewing"
+                title="Viewing"
+              >
+                <svg class="w-6 h-6">
+                  <use href="/sprite.svg#icon-eye"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block p-3 transition-colors duration-300 rounded-full border border-transparent hover:text-blue-400 hover:border-blue-400/25"
+                aria-label="World news"
+                title="World news"
+              >
+                <svg class="w-6 h-6">
+                  <use href="/sprite.svg#icon-earth"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="relative block p-3 transition-colors duration-300 rounded-full text-blue-400 border border-blue-400/25 bg-[radial-gradient(rgba(45,202,255,0.1),rgba(125,222,255,0)_74%)] hover:text-blue-400 hover:border-blue-400/25 after:absolute after:-right-2 after:top-1/2 after:h-[300%] after:transform after:-translate-y-1/2 after:w-0.25 after:bg-linear-to-b after:from-blue-400/0 after:via-blue-400 to-blue-400/0"
+                aria-label="Chart"
+                aria-current="page"
+                title="Chart"
+              >
+                <svg class="w-6 h-6">
+                  <use href="/sprite.svg#icon-chart"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block p-3 transition-colors duration-300 rounded-full border border-transparent hover:text-blue-400 hover:border-blue-400/25"
+                aria-label="Wallet"
+                title="Wallet"
+              >
+                <svg class="w-6 h-6">
+                  <use href="/sprite.svg#icon-wallet"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block p-3 transition-colors duration-300 rounded-full border border-transparent hover:text-blue-400 hover:border-blue-400/25"
+                aria-label="Community"
+                title="Community"
+              >
+                <svg class="w-6 h-6">
+                  <use href="/sprite.svg#icon-people"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <ul class="grid gap-4 mt-auto">
+            <li>
+              <a
+                href="#"
+                class="block p-3 transition-colors duration-300 rounded-full border border-transparent hover:text-blue-400 hover:border-blue-400/25"
+                aria-label="Settings"
+                title="Settings"
+              >
+                <svg class="w-6 h-6">
+                  <use href="/sprite.svg#icon-settings"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block p-3 transition-colors duration-300 rounded-full border border-transparent hover:text-blue-400 hover:border-blue-400/25"
+                aria-label="Mails"
+                title="Mails"
+              >
+                <svg class="w-6 h-6">
+                  <use href="/sprite.svg#icon-mail"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block p-3 transition-colors duration-300 rounded-full border border-transparent hover:text-blue-400 hover:border-blue-400/25"
+                aria-label="FAQ"
+                title="FAQ"
+              >
+                <svg class="w-6 h-6">
+                  <use href="/sprite.svg#icon-question"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <div>
+        <header
+          class="flex items-center justify-center gap-6 p-4 border border-b border-neutral-600 text-sm"
+          aria-label="Header"
+        >
+          <div class="flex items-center gap-4">
+            <a
+              href="#"
+              class="text-white transition-colors duration-300 hover:text-blue-400"
+              aria-label="Open menu"
+            >
+              <svg class="w-4 h-4">
+                <use href="/sprite.svg#icon-down" />
+              </svg>
+            </a>
+
+            <img
+              src="/user.jpg"
+              class="hidden sm:block w-6 h-6 rounded-full"
+              alt="User avatar"
+            />
+            <div class="grid gap-1 max-w-52">
+              <span class="text-white text-sm line-clamp-1">James Raymond</span>
+              <span class="text-xs">Account: 4453728992</span>
+            </div>
+
+            <span class="w-0.25 h-4 bg-neutral-500" aria-hidden="true"></span>
+
+            <a
+              href="#"
+              class="transition-colors duration-300 hover:text-blue-400"
+              aria-label="Notifications"
+            >
+              <svg class="w-4 h-4">
+                <use href="/sprite.svg#icon-bell" />
+              </svg>
+            </a>
+          </div>
+          <div class="hidden md:flex gap-8">
+            <div class="grid gap-1">
+              <span class="text-xs">Portfolio Balance</span>
+              <span class="text-white">$623,098.17</span>
+            </div>
+            <div class="grid gap-1">
+              <span class="text-xs">Available Funds</span>
+              <span class="text-white">$122,912.50</span>
+            </div>
+          </div>
+
+          <div
+            class="hidden sm:block relative ml-auto w-56 after:absolute after:-inset-0.25 after:bg-linear-to-b after:from-white/50 after:to-black/50 after:rounded-md"
+            role="search"
+            aria-label="Search"
+          >
+            <input
+              type="text"
+              class="relative z-1 w-full pl-10 pr-3 py-1.5 bg-neutral-700 text-white rounded-md outline-none transition-colors duration-300 focus:bg-neutral-600"
+              placeholder="Search"
+              aria-label="Search field"
+            />
+            <svg
+              class="absolute z-1 left-3 top-2 w-4 h-4 text-white pointer-events-none"
+              aria-hidden="true"
+            >
+              <use href="/sprite.svg#icon-search" />
+            </svg>
+          </div>
+        </header>
+        <main class="xl:grid grid-cols-4 gap-2 p-2">
+          <section class="col-span-3 bg-neutral-800 rounded-sm">
+            <ul
+              class="flex items-center justify-between gap-2 px-4 sm:px-6 py-2 bg-neutral-600 font-sm rounded-t-sm whitespace-nowrap overflow-x-auto scrollbar-hide"
+              role="tablist"
+              aria-label="Dashboard tabs"
+            >
+              <li class="xl:px-4">
+                <button
+                  type="button"
+                  class="relative after:absolute after:-bottom-2 after:w-[120%] after:-left-[10%] after:h-0.25 after:bg-linear-to-r after:from-blue-400/0 after:via-blue-400 to-blue-400/0 p-2 border rounded-full transition-colors duration-300 cursor-pointer text-blue-400 border-blue-400/25 bg-radial-(--gradient-blue)"
+                  role="tab"
+                  aria-selected="true"
+                >
+                  Chart
+                </button>
+              </li>
+              <li class="xl:px-4">
+                <button
+                  type="button"
+                  class="p-2 border border-transparent rounded-full transition-colors duration-300 cursor-pointer hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  Options
+                </button>
+              </li>
+              <li class="xl:px-4">
+                <button
+                  type="button"
+                  class="p-2 border border-transparent rounded-full transition-colors duration-300 cursor-pointer hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  News
+                </button>
+              </li>
+              <li class="xl:px-4">
+                <button
+                  type="button"
+                  class="p-2 border border-transparent rounded-full transition-colors duration-300 cursor-pointer hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  Financials
+                </button>
+              </li>
+              <li class="xl:px-4">
+                <button
+                  type="button"
+                  class="p-2 border border-transparent rounded-full transition-colors duration-300 cursor-pointer hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  Analysts
+                </button>
+              </li>
+              <li class="xl:px-4">
+                <button
+                  type="button"
+                  class="p-2 border border-transparent rounded-full transition-colors duration-300 cursor-pointer hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  Risk Analysis
+                </button>
+              </li>
+              <li class="xl:px-4">
+                <button
+                  type="button"
+                  class="p-2 border border-transparent rounded-full transition-colors duration-300 cursor-pointer hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  Releases
+                </button>
+              </li>
+              <li class="xl:px-4">
+                <button
+                  type="button"
+                  class="p-2 border border-transparent rounded-full transition-colors duration-300 cursor-pointer hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  Notes
+                </button>
+              </li>
+              <li class="xl:px-4">
+                <button
+                  type="button"
+                  class="p-2 border border-transparent rounded-full transition-colors duration-300 cursor-pointer hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  Profile
+                </button>
+              </li>
+            </ul>
+            <div class="grid gap-2">
+              <div
+                class="grid md:grid-cols-10 gap-4 md:gap-10 px-4 sm:px-6 py-3"
+              >
+                <div class="grid gap-3 md:col-span-4">
+                  <div
+                    class="flex flex-wrap items-center gap-1 sm:gap-3 text-white"
+                  >
+                    <div
+                      class="flex flex-wrap items-center gap-1 sm:gap-2 text-sm"
+                    >
+                      <div class="uppercase text-xl">msft</div>
+                      <div>Microsoft Corp NASDAQ</div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <a
+                        href="#"
+                        class="w-6 h-6 flex items-center justify-center border rounded-full transition-colors duration-300 hover:text-blue-400"
+                        aria-label="Add to watchlist"
+                        title="Add to watchlist"
+                      >
+                        <svg class="w-4 h-4">
+                          <use href="/sprite.svg#icon-eye" />
+                        </svg>
+                      </a>
+                      <a
+                        href="#"
+                        class="w-6 h-6 flex items-center justify-center border rounded-full transition-colors duration-300 hover:text-blue-400"
+                        aria-label="Set notification alert"
+                        title="Set notification alert"
+                      >
+                        <svg class="w-4 h-4">
+                          <use href="/sprite.svg#icon-bell" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap gap-2 text-green-400">
+                    <div
+                      class="text-[2.5rem] leading-[1.1] font-semibold line-clamp-1"
+                    >
+                      406.32
+                    </div>
+                    <div class="grid text-sm">
+                      <span>+2.24</span>
+                      <span>+0.26%</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap gap-1 sm:gap-2 text-sm">
+                    <span>After hours:</span>
+                    <span class="text-red-400">406.83 -0.27 -0.07%</span>
+                    <span>|</span>
+                    <span class="text-white">19:59 04/26 EDT</span>
+                  </div>
+                </div>
+                <div class="grid gap-1 md:col-span-3 max-w-96 text-sm">
+                  <div class="flex items-center justify-between">
+                    <span>Open</span>
+                    <span class="text-red-400">401.23</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span>Low</span>
+                    <span class="text-red-400">400.10</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span>High</span>
+                    <span class="text-green-400">408.36</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span>52 wk high</span>
+                    <span>430.82</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span>52 wk low</span>
+                    <span>473.13</span>
+                  </div>
+                </div>
+                <div class="grid gap-1 md:col-span-3 max-w-96 text-sm">
+                  <div class="flex items-center justify-between">
+                    <span>Avg Vol (3M)</span>
+                    <span class="text-white">21.73M</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span>Shares Outstanding</span>
+                    <span class="text-white">7.43B</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span>Mkt Cap</span>
+                    <span class="text-white">3.02T</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span>Div Yield</span>
+                    <span class="text-white">0.74%</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="flex items-center justify-between text-white transition-colors duration-300 hover:text-blue-400"
+                    aria-label="View all metrics"
+                  >
+                    <span>View all</span>
+                    <span>
+                      <svg class="w-4 h-4">
+                        <use href="/sprite.svg#icon-right" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+
+              <div>
+                <div class="grid gap-2 md:-mb-12 px-4 sm:px-6 relative z-10">
+                  <div class="grid gap-2">
+                    <ul
+                      class="flex flex-wrap items-center gap-2 text-sm text-white"
+                      aria-label="Stock metrics list"
+                    >
+                      <li class="flex items-center gap-1">
+                        Open <span class="text-green-400">408.36</span>
+                      </li>
+                      <li class="flex items-center gap-1">
+                        High <span class="text-green-400">408.36</span>
+                      </li>
+                      <li class="flex items-center gap-1">
+                        Low <span class="text-green-400">408.36</span>
+                      </li>
+                      <li class="flex items-center gap-1">
+                        Close <span class="text-green-400">408.36</span>
+                      </li>
+                      <li class="flex items-center gap-1">
+                        <span class="text-green-400">+8.90</span>
+                      </li>
+                      <li class="flex items-center gap-1">
+                        <span class="text-green-400">+2.14%</span>
+                      </li>
+                      <li class="flex items-center gap-1">
+                        Vol <span class="text-green-400">56,254,781</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    class="flex flex-wrap items-center text-white"
+                    role="group"
+                    aria-label="Chart controls and indicators"
+                  >
+                    <div
+                      class="flex gap-2"
+                      role="group"
+                      aria-label="Edit and close buttons"
+                    >
+                      <button
+                        type="button"
+                        class="w-6 h-6 flex items-center justify-center rounded-xs bg-neutral-600 transition-colors duration-300 hover:bg-neutral-500 cursor-pointer"
+                        aria-label="Edit chart"
+                      >
+                        <svg class="w-4 h-4">
+                          <use href="/sprite.svg#icon-edit" />
+                        </svg>
+                      </button>
+                      <button
+                        type="button"
+                        class="w-6 h-6 flex items-center justify-center rounded-xs bg-neutral-600 transition-colors duration-300 hover:bg-neutral-500 cursor-pointer"
+                        aria-label="Close chart"
+                      >
+                        <svg class="w-4 h-4">
+                          <use href="/sprite.svg#icon-close" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="flex flex-wrap gap-x-2 px-2 text-sm">
+                      <span class="text-purple-400">MA50:406.98</span>
+                      <span class="text-yellow-400">MA200:400.25</span>
+                    </div>
+                    <div
+                      class="flex flex-wrap gap-2"
+                      role="group"
+                      aria-label="Chart tools"
+                    >
+                      <button
+                        type="button"
+                        class="w-6 h-6 flex items-center justify-center rounded-xs bg-neutral-600 transition-colors duration-300 hover:bg-neutral-500 cursor-pointer"
+                        aria-label="Sort chart"
+                      >
+                        <svg class="w-4 h-4">
+                          <use href="/sprite.svg#icon-sort" />
+                        </svg>
+                      </button>
+                      <button
+                        type="button"
+                        class="w-6 h-6 flex items-center justify-center rounded-xs bg-neutral-600 transition-colors duration-300 hover:bg-neutral-500 cursor-pointer"
+                        aria-label="Take snapshot"
+                      >
+                        <svg class="w-4 h-4">
+                          <use href="/sprite.svg#icon-camera" />
+                        </svg>
+                      </button>
+                      <button
+                        type="button"
+                        class="w-6 h-6 flex items-center justify-center rounded-xs bg-neutral-600 transition-colors duration-300 hover:bg-neutral-500 cursor-pointer"
+                        aria-label="Zoom in"
+                      >
+                        <svg class="w-4 h-4">
+                          <use href="/sprite.svg#icon-plus" />
+                        </svg>
+                      </button>
+                      <button
+                        type="button"
+                        class="w-6 h-6 flex items-center justify-center rounded-xs bg-neutral-600 transition-colors duration-300 hover:bg-neutral-500 cursor-pointer"
+                        aria-label="Zoom out"
+                      >
+                        <svg class="w-4 h-4">
+                          <use href="/sprite.svg#icon-minus" />
+                        </svg>
+                      </button>
+                      <button
+                        type="button"
+                        class="w-6 h-6 flex items-center justify-center rounded-xs bg-neutral-600 transition-colors duration-300 hover:bg-neutral-500 cursor-pointer"
+                        aria-label="Add text annotation"
+                      >
+                        <svg class="w-4 h-4">
+                          <use href="/sprite.svg#icon-text" />
+                        </svg>
+                      </button>
+                      <button
+                        type="button"
+                        class="w-6 h-6 flex items-center justify-center rounded-xs bg-neutral-600 transition-colors duration-300 hover:bg-neutral-500 cursor-pointer"
+                        aria-label="Add diagram"
+                      >
+                        <svg class="w-4 h-4">
+                          <use href="/sprite.svg#icon-diagram" />
+                        </svg>
+                      </button>
+                      <button
+                        type="button"
+                        class="w-6 h-6 flex items-center justify-center rounded-xs bg-neutral-600 transition-colors duration-300 hover:bg-neutral-500 cursor-pointer"
+                        aria-label="Add link"
+                      >
+                        <svg class="w-4 h-4">
+                          <use href="/sprite.svg#icon-chain" />
+                        </svg>
+                      </button>
+                      <button
+                        type="button"
+                        class="w-6 h-6 flex items-center justify-center rounded-xs bg-neutral-600 transition-colors duration-300 hover:bg-neutral-500 cursor-pointer"
+                        aria-label="Draw"
+                      >
+                        <svg class="w-4 h-4">
+                          <use href="/sprite.svg#icon-pencil" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div id="candle-chart" class="w-full overflow-x-auto"></div>
+                <div
+                  class="flex flex-wrap items-center gap-2 pt-2 pb-6 px-4 sm:px-10 border-t border-neutral-600 text-sm text-white"
+                  role="group"
+                  aria-labelledby="timeframe-label"
+                >
+                  <span id="timeframe-label" class="text-neutral-400"
+                    >Time frame:</span
+                  >
+                  <button
+                    type="button"
+                    class="flex items-center justify-center cursor-pointer px-1.5 min-w-7.5 h-7.5 border border-transparent rounded-full transition-colors duration-300 hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                    aria-label="Set time frame to 1 minute"
+                    aria-pressed="false"
+                  >
+                    1m
+                  </button>
+                  <button
+                    type="button"
+                    class="flex items-center justify-center cursor-pointer px-1.5 min-w-7.5 h-7.5 border border-transparent rounded-full transition-colors duration-300 hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                    aria-label="Set time frame to 5 minutes"
+                    aria-pressed="false"
+                  >
+                    5m
+                  </button>
+                  <button
+                    type="button"
+                    class="flex items-center justify-center cursor-pointer px-1.5 min-w-7.5 h-7.5 border border-transparent rounded-full transition-colors duration-300 hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                    aria-label="Set time frame to 15 minutes"
+                    aria-pressed="false"
+                  >
+                    15m
+                  </button>
+                  <button
+                    type="button"
+                    class="flex items-center justify-center cursor-pointer px-1.5 min-w-7.5 h-7.5 border border-transparent rounded-full transition-colors duration-300 hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                    aria-label="Set time frame to 30 minutes"
+                    aria-pressed="false"
+                  >
+                    30m
+                  </button>
+                  <button
+                    type="button"
+                    class="relative after:absolute after:-top-2 transform -translate-y-0.5 after:w-[160%] after:-left-[30%] after:h-0.25 after:bg-linear-to-r after:from-blue-400/0 after:via-blue-400 after:to-blue-400/0 flex items-center justify-center cursor-pointer px-1.5 min-w-7.5 h-7.5 border rounded-full transition-colors duration-300 text-blue-400 border-blue-400/25 bg-radial-(--gradient-blue)"
+                    aria-label="Set time frame to 1 hour"
+                    aria-pressed="true"
+                  >
+                    1h
+                  </button>
+                  <button
+                    type="button"
+                    class="flex items-center justify-center cursor-pointer px-1.5 min-w-7.5 h-7.5 border border-transparent rounded-full transition-colors duration-300 hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                    aria-label="Set time frame to 2 hours"
+                    aria-pressed="false"
+                  >
+                    2h
+                  </button>
+                  <button
+                    type="button"
+                    class="flex items-center justify-center cursor-pointer px-1.5 min-w-7.5 h-7.5 border border-transparent rounded-full transition-colors duration-300 hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                    aria-label="Set time frame to 4 hours"
+                    aria-pressed="false"
+                  >
+                    4h
+                  </button>
+                  <button
+                    type="button"
+                    class="flex items-center justify-center cursor-pointer px-1.5 min-w-7.5 h-7.5 border border-transparent rounded-full transition-colors duration-300 hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                    aria-label="Set time frame to 1 day"
+                    aria-pressed="false"
+                  >
+                    D
+                  </button>
+                  <button
+                    type="button"
+                    class="flex items-center justify-center cursor-pointer px-1.5 min-w-7.5 h-7.5 border border-transparent rounded-full transition-colors duration-300 hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                    aria-label="Set time frame to 1 week"
+                    aria-pressed="false"
+                  >
+                    W
+                  </button>
+                  <button
+                    type="button"
+                    class="flex items-center justify-center cursor-pointer px-1.5 min-w-7.5 h-7.5 border border-transparent rounded-full transition-colors duration-300 hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                    aria-label="Set time frame to 1 month"
+                    aria-pressed="false"
+                  >
+                    M
+                  </button>
+                  <button
+                    type="button"
+                    class="flex items-center justify-center cursor-pointer px-1.5 min-w-7.5 h-7.5 border border-transparent rounded-full transition-colors duration-300 hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                    aria-label="Set time frame to All"
+                    aria-pressed="false"
+                  >
+                    All
+                  </button>
+                  <button
+                    type="button"
+                    class="flex items-center justify-center cursor-pointer px-1.5 min-w-7.5 h-7.5 border border-transparent rounded-full transition-colors duration-300 hover:text-blue-400 hover:border-blue-400/25 hover:bg-radial-(--gradient-blue)"
+                    aria-label="Set time frame to 2 minutes, more options"
+                    aria-pressed="false"
+                  >
+                    2m
+                    <svg class="w-4 h-4">
+                      <use href="/sprite.svg#icon-down"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="mb-2 bg-neutral-800 rounded-sm">
+              <div
+                class="flex items-center justify-between px-6 py-4 bg-neutral-600 text-white font-semibold rounded-t-sm"
+              >
+                Trade
+                <svg class="w-4 h-4">
+                  <use href="/sprite.svg#icon-burger"></use>
+                </svg>
+              </div>
+              <div class="text-sm">
+                <div
+                  class="grid grid-cols-2 border-b border-neutral-400"
+                  role="tablist"
+                  aria-label="Trade action"
+                >
+                  <button
+                    type="button"
+                    class="relative p-4 text-green-400 bg-linear-(--gradient-green) transition-colors duration-300 hover:text-green-400 cursor-pointer after:absolute after:bottom-0 after:w-full after:left-0 after:h-0.5 after:bg-green-400"
+                    role="tab"
+                    aria-selected="true"
+                  >
+                    Buy
+                  </button>
+                  <button
+                    type="button"
+                    class="p-4 transition-colors duration-300 hover:text-green-400 hover:bg-linear-(--gradient-green) cursor-pointer"
+                    role="tab"
+                    aria-selected="true"
+                  >
+                    Sell
+                  </button>
+                </div>
+                <div>
+                  <form class="grid gap-4 px-4 sm:px-6 py-4">
+                    <div class="grid gap-1">
+                      <label for="type">Order type</label>
+                      <div class="form-control-wrapper">
+                        <select
+                          name="type"
+                          id="type"
+                          class="form-control pl-3 appearance-none"
+                        >
+                          <option value="option_1">Market price</option>
+                          <option value="option_2">Option 2</option>
+                          <option value="option_3">Option 3</option>
+                        </select>
+                        <svg
+                          class="w-4 h-4 absolute z-1 top-1/2 right-3 transform -translate-y-1/2 text-white pointer-events-none"
+                        >
+                          <use href="/sprite.svg#icon-down" />
+                        </svg>
+                      </div>
+                    </div>
+
+                    <div class="grid gap-2">
+                      <label for="quantity">
+                        Quantity
+                        <span
+                          class="px-2 py-0.25 text-blue-400 border rounded-full"
+                          >Shares</span
+                        >
+                      </label>
+                      <div class="form-control-wrapper">
+                        <input
+                          id="quantity"
+                          type="number"
+                          value="100"
+                          class="form-control pl-3 appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                        />
+                        <svg
+                          class="w-4 h-4 absolute z-1 top-1/2 right-3 transform -translate-y-1/2 text-white pointer-events-none"
+                        >
+                          <use href="/sprite.svg#icon-up-down" />
+                        </svg>
+                      </div>
+                      <div
+                        class="flex items-center justify-between gap-2.5 text-white overflow-x-auto"
+                      >
+                        <button
+                          type="button"
+                          class="flex-1 p-0.25 bg-radial-[at_25%_75%] from-white/30 to-white/6 rounded-full group"
+                        >
+                          <span
+                            class="block px-4 py-2 bg-neutral-600 rounded-full transition-colors duration-300 group-hover:bg-neutral-700 cursor-pointer"
+                            >10</span
+                          >
+                        </button>
+                        <button
+                          type="button"
+                          class="flex-1 p-0.25 bg-radial-[at_25%_75%] from-white/30 to-white/6 rounded-full group"
+                        >
+                          <span
+                            class="block px-4 py-2 bg-neutral-600 rounded-full transition-colors duration-300 group-hover:bg-neutral-700 cursor-pointer"
+                            >50</span
+                          >
+                        </button>
+                        <button
+                          type="button"
+                          class="flex-1 p-0.25 bg-radial-[at_25%_75%] from-white/30 to-white/6 rounded-full group"
+                        >
+                          <span
+                            class="block px-4 py-2 bg-neutral-600 rounded-full transition-colors duration-300 group-hover:bg-neutral-700 cursor-pointer"
+                            >100</span
+                          >
+                        </button>
+                        <button
+                          type="button"
+                          class="flex-1 p-0.25 bg-radial-[at_25%_75%] from-white/30 to-white/6 rounded-full group"
+                        >
+                          <span
+                            class="block px-4 py-2 bg-neutral-600 rounded-full transition-colors duration-300 group-hover:bg-neutral-700 cursor-pointer"
+                            >500</span
+                          >
+                        </button>
+                        <button
+                          type="button"
+                          class="cursor-pointer transition-colors duration-300 hover:text-neutral-400"
+                        >
+                          <svg class="w-4 h-4">
+                            <use href="/sprite.svg#icon-edit" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="grid gap-1">
+                      <label for="time">Time-in-Force</label>
+                      <div class="form-control-wrapper">
+                        <select
+                          name="type"
+                          id="time"
+                          class="form-control pl-3 appearance-none"
+                        >
+                          <option value="option_1">Day</option>
+                          <option value="option_2">Option 2</option>
+                          <option value="option_3">Option 3</option>
+                        </select>
+                        <svg
+                          class="w-4 h-4 absolute z-1 top-1/2 right-3 transform -translate-y-1/2 text-white pointer-events-none"
+                        >
+                          <use href="/sprite.svg#icon-down" />
+                        </svg>
+                      </div>
+                    </div>
+
+                    <div class="grid gap-2">
+                      <div class="flex items-center gap-2">
+                        <label
+                          class="relative inline-flex items-center cursor-pointer"
+                        >
+                          <input
+                            type="checkbox"
+                            class="sr-only peer"
+                            role="switch"
+                            aria-label="Enable stop price"
+                          />
+                          <span
+                            class="w-9 h-5 bg-blue-400 rounded-full peer-checked:bg-yellow-400 transition-colors duration-300"
+                          >
+                          </span>
+                          <span
+                            class="absolute top-1/2 transform -translate-y-1/2 translate-x-5 w-3 h-3 bg-neutral-900 rounded-full transition-transform duration-300 peer-checked:translate-x-1"
+                          ></span>
+                        </label>
+                        <label for="price"> Stop price </label>
+                      </div>
+                      <div class="form-control-wrapper">
+                        <span
+                          class="absolute z-2 left-3 top-1/2 transform -translate-y-1/2 text-white pointer-events-none"
+                          >$</span
+                        >
+                        <input
+                          id="price"
+                          type="number"
+                          value="400"
+                          class="pl-9 form-control appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                        />
+                        <svg
+                          class="w-4 h-4 absolute z-1 top-1/2 right-3 transform -translate-y-1/2 text-white pointer-events-none"
+                        >
+                          <use href="/sprite.svg#icon-up-down" />
+                        </svg>
+                      </div>
+                      <p>
+                        Est. Loss: <span class="text-red-400">12,057.36</span>
+                      </p>
+                    </div>
+
+                    <div
+                      class="h-0.25 -mx-4 sm:-mx-6 bg-[repeating-linear-gradient(to_right,_#1f1f1f_0_7px,_transparent_7px_14px)]"
+                      aria-hidden="true"
+                    ></div>
+
+                    <div class="grid gap-2">
+                      <div class="flex items-center justify-between gap-4">
+                        <span>Buying Power</span>
+                        <span class="text-white">$122,912.50</span>
+                      </div>
+                      <div class="flex items-center justify-between gap-4">
+                        <span>Transaction Fees</span>
+                        <span class="text-white">$4.00</span>
+                      </div>
+                      <div class="flex items-center justify-between gap-4">
+                        <span>Estimated Total</span>
+                        <span class="text-white">$40,000</span>
+                      </div>
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="p-2 bg-green-400 text-neutral-900 rounded-sm cursor-pointer transition-colors duration-300 hover:bg-green-400/80"
+                    >
+                      Buy MSFT
+                    </button>
+                    <a
+                      href="#"
+                      class="flex items-center justify-self-center gap-1 text-xs text-white transition-colors duration-300 hover:text-blue-400"
+                      aria-label="Read disclaimer"
+                    >
+                      Disclaimer
+                      <svg class="w-4 h-4">
+                        <use href="/sprite.svg#icon-right" />
+                      </svg>
+                    </a>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-white bg-neutral-800 rounded-sm">
+              <div
+                class="flex items-center justify-between px-4 sm:px-6 py-4 bg-neutral-600 font-semibold rounded-t-sm"
+              >
+                Time & Sales
+                <svg class="w-4 h-4">
+                  <use href="/sprite.svg#icon-burger"></use>
+                </svg>
+              </div>
+              <ul
+                class="grid gap-3.5 h-44 pl-6 pr-4 pt-4 pb-6 text-sm overflow-y-auto scrollbar scrollbar-w-2 scrollbar-thumb-rounded-full scrollbar-thumb-neutral-600"
+              >
+                <li class="flex gap-2 justify-between items-center">
+                  <span>16:59:32</span>
+                  <span>420.56</span>
+                  <span>25</span>
+                </li>
+                <li class="flex gap-2 justify-between items-center">
+                  <span>16:59:32</span>
+                  <span>420.56</span>
+                  <span>25</span>
+                </li>
+                <li class="flex gap-2 justify-between items-center">
+                  <span>16:59:32</span>
+                  <span>420.56</span>
+                  <span>25</span>
+                </li>
+                <li class="flex gap-2 justify-between items-center">
+                  <span>16:59:32</span>
+                  <span>420.56</span>
+                  <span>25</span>
+                </li>
+                <li class="flex gap-2 justify-between items-center">
+                  <span>16:59:32</span>
+                  <span>420.56</span>
+                  <span>25</span>
+                </li>
+                <li class="flex gap-2 justify-between items-center">
+                  <span>16:59:32</span>
+                  <span>420.56</span>
+                  <span>25</span>
+                </li>
+                <li class="flex gap-2 justify-between items-center">
+                  <span>16:59:32</span>
+                  <span>420.56</span>
+                  <span>25</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
+    <script>
+      const chartContainer = document.getElementById('candle-chart');
+      const chart = LightweightCharts.createChart(chartContainer, {
+        layout: {
+          background: { color: '#000000' },
+          textColor: '#d1d5db',
+        },
+        grid: {
+          vertLines: { color: '#2d3748' },
+          horzLines: { color: '#2d3748' },
+        },
+        width: chartContainer.clientWidth,
+        height: 650,
+        crosshair: { mode: LightweightCharts.CrosshairMode.Normal },
+        rightPriceScale: { borderColor: '#374151' },
+        timeScale: { borderColor: '#374151', timeVisible: true },
+      });
+      const candleSeries = chart.addCandlestickSeries({
+        upColor: '#22c55e',
+        downColor: '#ef4444',
+        wickUpColor: '#22c55e',
+        wickDownColor: '#ef4444',
+      });
+      candleSeries.setData([
+        { time: '2023-01-04', open: 408, high: 417, low: 400, close: 403 },
+        { time: '2023-01-05', open: 401, high: 411, low: 396, close: 410 },
+        { time: '2023-01-06', open: 412, high: 423, low: 401, close: 414 },
+        { time: '2023-01-07', open: 417, high: 422, low: 410, close: 418 },
+        { time: '2023-01-08', open: 418, high: 430, low: 406, close: 412 },
+        { time: '2023-01-09', open: 411, high: 417, low: 402, close: 416 },
+        { time: '2023-01-10', open: 418, high: 429, low: 407, close: 409 },
+        { time: '2023-01-11', open: 412, high: 426, low: 403, close: 419 },
+        { time: '2023-01-12', open: 418, high: 423, low: 406, close: 406 },
+        { time: '2023-01-13', open: 409, high: 419, low: 399, close: 412 },
+        { time: '2023-01-14', open: 413, high: 419, low: 402, close: 410 },
+      ]);
+      window.addEventListener('resize', () => {
+        chart.resize(chartContainer.clientWidth, 650);
+      });
+    </script>
+  </body>
+</html>
